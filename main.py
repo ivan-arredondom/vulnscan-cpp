@@ -22,14 +22,14 @@ def main():
 
   if not vulnerabilities:
     # Inform the user and exit the program
-    print("No vulnerabilities found.")
+    print("No vulnerabilities found")
     print("No further action required.")
     return
   else:
     print("Vulnerabilities found:")
     for vuln in vulnerabilities:
       print(f" - {vuln}")
-      
+
     print("Please review the vulnerabilities and take appropriate action.")
 
 
