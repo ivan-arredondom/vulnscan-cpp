@@ -1,9 +1,18 @@
-#Entry point for the program
+# Entry point for the program
 
 import os
+import sys
 
+# Program usage: python3 main.py test/vulnerable.c
 def main():
-    pass
+    if len(sys.argv) != 2:
+      print("Usage: python3 main.py <source_file>")
+      return
+    file_path = sys.argv[1]
+    if not validate_input_file(file_path):
+      print("Sorry, the provided file is not valid.")
+      return
+
 
 
 # Checks if the file is a valid one (C or C++)
